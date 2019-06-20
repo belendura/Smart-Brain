@@ -81,7 +81,7 @@ displayBoundingBox =(box) =>{
 
 onButtonDetect =(event)=>{
   this.setState({imageURL:this.state.input});
-  fetch("http://localhost:3000/ImageURL", 
+  fetch(" https://guarded-beyond-11751.herokuapp.com/ImageURL", 
   {
     method:"post",
     headers: {"Content-Type": "application/json"},
@@ -92,7 +92,7 @@ onButtonDetect =(event)=>{
   .then(response => response.json())
   .then(response =>{
     if (response){
-      fetch("http://localhost:3000/Image", {
+      fetch("https://guarded-beyond-11751.herokuapp.com/Image", {
       method:"put",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
